@@ -174,6 +174,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    box-shadow: 1px 1px 10px 1px rgb(247 240 240 / 75%);
 }
 
 .cbp img {
@@ -1147,12 +1148,12 @@
 .cbp-l-filters-buttonCenter .cbp-filter-item {
     background-color: #FFFFFF;
     border: 1px solid #ECECEC;
-    color: #888888;
+    color: #a71e2b;
     cursor: pointer;
     font: 400 12px/32px "Roboto", sans-serif;
-    margin: 0 5px 10px 5px;
+    margin: 0 3px 10px 3px;
     overflow: visible;
-    padding: 0 17px;
+    padding: 0 10px;
     position: relative;
     display: inline-block;
     -webkit-transition: color .3s ease-in-out, border-color .3s ease-in-out;

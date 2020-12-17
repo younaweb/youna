@@ -12,7 +12,7 @@
 
 jQuery(document).ready(function($) {
 
-
+    // $("#menu-container .content2").hide();
     /*------------------------------------------------------------------------*/
     /*	1.	Plugins Init
     /*------------------------------------------------------------------------*/
@@ -71,10 +71,10 @@ jQuery(document).ready(function($) {
 
 
     /************** Open Filters on gallery page *********************/
-    $(".toggle-filter").click(function() {
-        $(".filter-controls").slideToggle();
-        return false;
-    });
+    // $(".toggle-filter").click(function() {
+    //     $(".filter-controls").slideToggle();
+    //     return false;
+    // });
 
 
 
@@ -83,6 +83,8 @@ jQuery(document).ready(function($) {
         var id = $(this).attr('class');
         id = id.split('-');
         $("#menu-container .content").hide();
+        $("#menu-container .content2").hide();
+
         $("#menu-container #menu-" + id[1]).slideDown(600);
         $("#menu-container .homepage").hide();
         return false;
@@ -112,10 +114,17 @@ jQuery(document).ready(function($) {
     });
 
     $(".main_menu .show-3").click(function() {
+        $("#menu-container .content2").css({
+            'display': 'block',
+
+        }).fadeIn('slow');
+
+
         $(".bg-image").fadeOut('slow', function() {
             $(this).css({
                 'background-image': 'url(images/bg-gallery.jpg)',
             }).fadeIn('slow');
+
         });
         return false;
     });

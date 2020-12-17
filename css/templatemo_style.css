@@ -1,9 +1,3 @@
-/* 
-Genius Template 
-http://www.templatemo.com/tm-402-genius 
-*/
-
-
 /*-----------------------------------------------------------------------------------*/
 
 
@@ -60,11 +54,16 @@ h6 {
 }
 
 .content,
-.content1 {
+.content1,
+.content2 {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 .content {
+    display: none;
+}
+
+.content2 {
     display: none;
 }
 
@@ -645,6 +644,10 @@ input.mainBtn {
 
 .menu-toggle-btn i {
     line-height: 60px;
+}
+
+#menu-4 .icon i {
+    font-size: 30px;
 }
 
 .responsive_menu {

@@ -4147,7 +4147,7 @@
 
 .cbp-slider .cbp-nav-next,
 .cbp-slider .cbp-nav-prev {
-    background: transparent;
+    /* background: transparent; */
     position: absolute;
     margin: auto;
     top: 0;
@@ -4155,6 +4155,8 @@
     z-index: 100;
     width: 44px;
     height: 44px;
+    background: #a71e2b;
+    border-radius: 50%;
 }
 
 .cbp-slider .cbp-nav-next {

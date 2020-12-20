@@ -134,7 +134,7 @@
                                     <!-- /.col-md-7 -->
                                     <div class="col-md-5">
                                         <!-- <h3 class="widget-title">Our Skills</h3> -->
-                                        <img src="images/logo.png" alt="Youna">
+                                        <img src="images/logo.png" alt="Youna" style="width:100%">
                                     </div>
                                     <!-- /.col-md-5 -->
                                 </div>
@@ -595,28 +595,30 @@
                             <div class="content-inner">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <h3 class="widget-title">Nous contacter c'est facile ...</h3>
-                                        <p>Pour nous contacter veuillez laisser un message, appeler par téléphone ou se connecter à nos réseaux sociaux</p>
-                                        <div class="row contact-form">
-                                            <div class="col-md-4">
-                                                <label for="name-id">Nom:</label>
-                                                <input name="name-id" type="text" id="name-id" maxlength="40">
+                                        <form name="contact" netlify>
+                                            <h3 class="widget-title">Nous contacter c'est facile ...</h3>
+                                            <p>Pour nous contacter veuillez laisser un message, appeler par téléphone ou se connecter à nos réseaux sociaux</p>
+                                            <div class="row contact-form">
+                                                <div class="col-md-4">
+                                                    <label for="name-id">Nom:</label>
+                                                    <input name="name-id" type="text" id="name-id" maxlength="40">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="email-id">E-mail:</label>
+                                                    <input name="email-id" type="text" id="email-id" maxlength="40">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="subject-id">Objet:</label>
+                                                    <input name="subject-id" type="text" id="subject-id" maxlength="60">
+                                                </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <label for="email-id">E-mail:</label>
-                                                <input name="email-id" type="text" id="email-id" maxlength="40">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="subject-id">Objet:</label>
-                                                <input name="subject-id" type="text" id="subject-id" maxlength="60">
-                                            </div>
-                                        </div>
-                                        <!-- /.contact-form -->
-                                        <p class="full-row">
-                                            <label for="message">Message:</label>
-                                            <textarea name="message" id="message" rows="6"></textarea>
-                                        </p>
-                                        <input class="mainBtn" type="submit" name="" value="Send Message">
+                                            <!-- /.contact-form -->
+                                            <p class="full-row">
+                                                <label for="message">Message:</label>
+                                                <textarea name="message" id="message" rows="6"></textarea>
+                                            </p>
+                                            <input class="mainBtn" type="submit" name="" value="Send Message">
+                                        </form>
                                     </div>
                                     <!-- /.col-md-8 -->
                                     <div class="col-md-4">

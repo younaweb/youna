@@ -15,7 +15,7 @@
 
     <meta name="author" content="templatemo">
     <meta charset="UTF-8">
-    <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- CSS Bootstrap & Custom -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
@@ -598,9 +598,13 @@
                                         <h3 class="widget-title">Nous contacter c'est facile ...</h3>
                                         <p>Pour nous contacter veuillez laisser un message, appeler par téléphone ou se connecter à nos réseaux sociaux</p>
 
-                                        <div class="alert alert-success" role="alert">
+                                        <div class="alert  alert-success" role="alert">
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <strong>Success!</strong> You have been signed in successfully!
+                                            <strong>Success!</strong> Votre message a bien été envoyé!
+                                        </div>
+                                        <div class="alert  alert-error alert-danger" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <strong>Error!</strong> Un ou plusieurs champs est vide!
                                         </div>
                                         <form name="contact" netlify>
                                             <div class="row contact-form">
@@ -610,7 +614,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label for="email-id">E-mail:</label>
-                                                    <input name="email-id" type="text" id="email-id" maxlength="40">
+                                                    <input name="email-id" type="email" id="email-id" maxlength="40">
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label for="subject-id">Objet:</label>
@@ -622,7 +626,7 @@
                                                 <label for="message">Message:</label>
                                                 <textarea name="message" id="message" rows="6"></textarea>
                                             </p>
-                                            <input class="mainBtn" type="submit" name="" value="Send Message">
+                                            <button class="mainBtn" type="submit" name="">Envoyer</button>
                                         </form>
                                     </div>
                                     <!-- /.col-md-8 -->
@@ -707,15 +711,23 @@
     <script>
         $(document).ready(function() {
 
-            $(".alert").hide();
+            $(".alert-success").hide();
+            $(".alert-error").hide();
             $('.mainBtn').on('click', function(e) {
                 e.preventDefault();
-                $('#name-id').empty();
-                $('#email-id').empty();
-                $('#subject-id').empty();
-                $('#message').empty();
+                if ($('#name-id').val() == '' || $('#email-id').val() == '' || $('#subject-id').val() == '' || $('#message').val() == '') {
+                    $(".alert-error").fadeIn('slow');
+                } else {
 
-                $(".alert").fadeIn('slow');
+                    $('#name-id').val('');
+                    $('#email-id').val('');
+                    $('#subject-id').val('');
+                    $('#message').val('');
+                    $(".alert-success").fadeIn('slow');
+                    setTimeout(function() {
+                        $(".alert-success").alert('close');
+                    }, 2000);
+                }
 
             });
         });

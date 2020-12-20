@@ -517,7 +517,7 @@ label {
     width: 100%;
 }
 
-input.mainBtn {
+.mainBtn {
     background-color: #a71e2b;
     color: white;
     border: 0;

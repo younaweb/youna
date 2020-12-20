@@ -595,9 +595,14 @@
                             <div class="content-inner">
                                 <div class="row">
                                     <div class="col-md-8">
+                                        <h3 class="widget-title">Nous contacter c'est facile ...</h3>
+                                        <p>Pour nous contacter veuillez laisser un message, appeler par téléphone ou se connecter à nos réseaux sociaux</p>
+
+                                        <div class="alert alert-success" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <strong>Success!</strong> You have been signed in successfully!
+                                        </div>
                                         <form name="contact" netlify>
-                                            <h3 class="widget-title">Nous contacter c'est facile ...</h3>
-                                            <p>Pour nous contacter veuillez laisser un message, appeler par téléphone ou se connecter à nos réseaux sociaux</p>
                                             <div class="row contact-form">
                                                 <div class="col-md-4">
                                                     <label for="name-id">Nom:</label>
@@ -698,24 +703,22 @@
     <!-- init cubeportfolio -->
     <script type="text/javascript" src="js/main.js"></script>
 
+
     <script>
-        function initialize() {
-            var mapOptions = {
-                zoom: 15,
-                center: new google.maps.LatLng(16.832179, 96.134976)
-            };
+        $(document).ready(function() {
 
-            var map = new google.maps.Map(document.getElementById('map-canvas'),
-                mapOptions);
-        }
+            $(".alert").hide();
+            $('.mainBtn').on('click', function(e) {
+                e.preventDefault();
+                $('#name-id').empty();
+                $('#email-id').empty();
+                $('#subject-id').empty();
+                $('#message').empty();
 
-        function loadScript() {
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-                'callback=initialize';
-            document.body.appendChild(script);
-        }
+                $(".alert").fadeIn('slow');
+
+            });
+        });
     </script>
 
 </body>

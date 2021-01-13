@@ -128,6 +128,22 @@ jQuery(document).ready(function($) {
         });
         return false;
     });
+    $(".cvnaoufel").click(function() {
+        var id = $(this).attr('class');
+        id = id.split('-');
+        $("#menu-container .content").hide();
+        $("#menu-container .content2").hide();
+
+        $("#menu-container .menu-7").slideDown(600);
+        $("#menu-container .homepage").hide();
+
+        $(".bg-image").fadeOut('slow', function() {
+            $(this).css({
+                'background-image': 'url(images/bg-cv.jpg)',
+            }).fadeIn('slow');
+        });
+        return false;
+    });
 
     $(".main_menu .show-3").click(function() {
         $("#menu-container .content2").css({
